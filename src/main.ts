@@ -11,18 +11,24 @@ export default class ImageViewer extends Plugin {
   isShowByButton = false
 
   onload() {
+    this.viewer = new Viewer(document.querySelector('#write')!, {
+      show: (event) => {
+        if (!this.isShowByButton) {
+          // Disable show viewer by clicking on the image
+          event.preventDefault()
+          event.stopPropagation()
+        }
+      },
+    })
+
     this.register(
       this.app.workspace.on('file:open', () => {
-        this.viewer?.destroy()
-        this.viewer = new Viewer(document.querySelector('#write')!, {
-          show: (event) => {
-            if (!this.isShowByButton) {
-              // Disable show viewer by clicking on the image
-              event.preventDefault()
-              event.stopPropagation()
-            }
-          },
-        })
+        this.viewer.update()
+      }))
+
+    this.register(
+      this.app.workspace.activeEditor.on('edit', () => {
+        this.viewer.update()
       }))
 
     this.registerMarkdownPostProcessor(new ImageViewerButton(this))
@@ -40,7 +46,7 @@ class ImageViewerButton extends HtmlPostProcessor {
   }
 
   get selector() {
-    return '#write .md-img-loaded'
+    return '#write .md-image'
   }
 
   button = {
