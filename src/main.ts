@@ -46,8 +46,16 @@ class ImageViewerButton extends HtmlPostProcessor {
   button = {
     text: '<span class="fa fa-search-plus"></span>',
     onclick: (event: MouseEvent) => {
+
+      const img = (<HTMLElement>event.target)
+        .closest('.md-image')!
+        .querySelector('img')
+
+      const idx = (<any>this.plugin.viewer)?.images
+        .findIndex((image: HTMLImageElement) => image === img)
+
       this.plugin.isShowByButton = true
-      this.plugin.viewer?.show(true)
+      this.plugin.viewer?.view(idx)
       this.plugin.isShowByButton = false
     }
   }

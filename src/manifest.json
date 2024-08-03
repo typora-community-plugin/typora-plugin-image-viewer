@@ -1,11 +1,11 @@
 {
   "id": "typora-community-plugin.image-viewer",
   "name": "Image Viewer",
-  "description": "Image Viewer for Typora",
+  "description": "View all the images in the current Markdown.",
   "author": "plylrnsdy",
   "authorUrl": "https://github.com/plylrnsdy",
   "repo": "typora-community-plugin/typora-plugin-image-viewer",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "minAppVersion": "1.5.0",
   "minCoreVersion": "2.0.0-beta.36",
   "platforms": ["win32", "linux", "darwin"]
