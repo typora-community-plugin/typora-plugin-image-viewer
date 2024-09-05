@@ -1,4 +1,3 @@
-import './style.scss'
 import 'viewerjs/dist/viewer.css'
 import Viewer from 'viewerjs'
 import { HtmlPostProcessor, Plugin } from '@typora-community-plugin/core'
