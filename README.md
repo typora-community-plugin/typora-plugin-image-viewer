@@ -6,6 +6,16 @@ This a plugin based on [typora-community-plugin][core] for [Typora](https://typo
 
 View all the images in the current Markdown.
 
+Useage:
+
+- Click the button on the image's top-right corner to preview the image.
+
+  > Suporrt `![]()` and `<img src="...">`
+
+- Click the image to preview the image.
+
+  > Support images wrapped in html tag, like `<div><img src="..."></div>`
+
 ## Preview
 
 ![](./docs/assets/base.gif)

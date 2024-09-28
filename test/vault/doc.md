@@ -2,6 +2,13 @@
 
 ![](https://fengyuanchen.github.io/viewerjs/images/thumbnails/tibet-1.jpg)
 
-![](https://fengyuanchen.github.io/viewerjs/images/thumbnails/tibet-2.jpg)
+<img src="https://fengyuanchen.github.io/viewerjs/images/thumbnails/tibet-2.jpg" style="zoom:50%;" />
 
-![](https://fengyuanchen.github.io/viewerjs/images/thumbnails/tibet-3.jpg)
+<figure>
+	<center>
+    <img src="https://fengyuanchen.github.io/viewerjs/images/thumbnails/tibet-3.jpg" style="zoom:50%;" />
+  	<figcaption>Title</figcaption>
+  </center>
+</figure>
+
+
