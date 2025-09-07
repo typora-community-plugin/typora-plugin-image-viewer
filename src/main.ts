@@ -69,7 +69,7 @@ class ImageViewerButton extends HtmlPostProcessor {
   }
 
   get selector() {
-    return '#write .md-image'
+    return '.md-image'
   }
 
   button = {
